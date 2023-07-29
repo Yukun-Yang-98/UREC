@@ -43,7 +43,7 @@ if opt.save_img:
     run_dir = get_dir_name('./test', 'EED_StKm3_')
     os.makedirs(run_dir)
     os.makedirs(run_dir + '/save_files/')
-    shutil.copyfile('./test_km3_EED.py', run_dir + '/save_files/' + 'test_km3_EED.py')
+    shutil.copyfile('./test_EED.py', run_dir + '/save_files/' + 'test_EED.py')
     testdira = run_dir + '/a'
     testdirb = run_dir + '/b'
     testdirc = run_dir + '/c'
@@ -166,7 +166,6 @@ def Test_train(std_imgs_path, output_dir):
         num_workers=opt.n_cpus,
     )
     print(len(dataloader))
-
 
     now = 0
     numbatches = len(dataloader)
