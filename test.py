@@ -34,13 +34,13 @@ def getparser():
 
 opt = getparser()
 
-checkpoint_gm = torch.load('./curve.pth')   #small
+checkpoint_gm = torch.load('./weights/curve.pth')   #small
 if opt.model == '1d':
-    checkpoint_1d = torch.load('./Decom_1d.pth')
-    checkpoint3_1d = torch.load('./Expcontrol_1d.pth')
+    checkpoint_1d = torch.load('./weights/Decom_1d.pth')
+    checkpoint3_1d = torch.load('./weights/Expcontrol_1d.pth')
 elif opt.model == '3d':
-    checkpoint_3d = torch.load('./Decom_3d.pth')
-    checkpoint3_3d = torch.load('./Expcontrol_3d.pth')
+    checkpoint_3d = torch.load('./weights/Decom_3d.pth')
+    checkpoint3_3d = torch.load('./weights/Expcontrol_3d.pth')
 
 img_path, gm_path, k_path = '', '', ''
 if opt.save_img:
